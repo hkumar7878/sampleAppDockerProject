@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="BackBase Regression Suite" duration-ms="20922" started-at="2018-09-20T07:39:24Z" finished-at="2018-09-20T07:39:45Z">
+    <groups>
+    </groups>
+    <test name="Windows+Chrome Test" duration-ms="20838" started-at="2018-09-20T07:39:24Z" finished-at="2018-09-20T07:39:45Z">
+      <class name="com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases">
+        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method, java.lang.String)[pri:0, instance:com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases@60c6f5b]" name="getMethodName" is-config="true" duration-ms="7727" started-at="2018-09-20T13:09:24Z" finished-at="2018-09-20T13:09:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases.TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMethodName -->
+        <test-method status="PASS" signature="TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification()[pri:0, instance:com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases@60c6f5b]" name="TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification" duration-ms="9204" started-at="2018-09-20T13:09:32Z" finished-at="2018-09-20T13:09:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification -->
+        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases@60c6f5b]" name="afterEachTest" is-config="true" duration-ms="3889" started-at="2018-09-20T13:09:41Z" finished-at="2018-09-20T13:09:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification status=SUCCESS method=Add_New_Computer_Functionality_TestCases.TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification()[pri:0, instance:com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases@60c6f5b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+      </class> <!-- com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases -->
+    </test> <!-- Windows+Chrome Test -->
+    <test name="Windows+firefox Test" duration-ms="20922" started-at="2018-09-20T07:39:24Z" finished-at="2018-09-20T07:39:45Z">
+      <class name="com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases">
+        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method, java.lang.String)[pri:0, instance:com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases@5f2108b5]" name="getMethodName" is-config="true" duration-ms="14497" started-at="2018-09-20T13:09:24Z" finished-at="2018-09-20T13:09:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases.TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMethodName -->
+        <test-method status="PASS" signature="TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification()[pri:0, instance:com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases@5f2108b5]" name="TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification" duration-ms="6334" started-at="2018-09-20T13:09:39Z" finished-at="2018-09-20T13:09:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification -->
+        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases@5f2108b5]" name="afterEachTest" is-config="true" duration-ms="78" started-at="2018-09-20T13:09:45Z" finished-at="2018-09-20T13:09:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification status=SUCCESS method=Add_New_Computer_Functionality_TestCases.TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification()[pri:0, instance:com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases@5f2108b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+      </class> <!-- com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases -->
+    </test> <!-- Windows+firefox Test -->
+  </suite> <!-- BackBase Regression Suite -->
+</testng-results>

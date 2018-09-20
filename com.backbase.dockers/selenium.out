@@ -1,0 +1,20 @@
+2018-09-20 13:09:24 INFO  Test:91 - Creating a object of Firefox Browser
+2018-09-20 13:09:24 INFO  Test:92 - Navigating to http://computer-database.herokuapp.com/computersfor Firefox browser
+2018-09-20 13:09:24 INFO  Test:116 - Creating a object of Chrome Browser
+2018-09-20 13:09:32 INFO  Test:80 - --------Home Page is displayed successfully-----------------
+2018-09-20 13:09:33 INFO  Test:156 - --------Add new computer clicked successfully-----------------
+2018-09-20 13:09:34 INFO  Test:81 - -----Computer name entered successfully-----
+2018-09-20 13:09:35 INFO  Test:90 - -----Introdced date entered successfully-----
+2018-09-20 13:09:36 INFO  Test:99 - -----Introdced date entered successfully-----
+2018-09-20 13:09:39 INFO  Test:80 - --------Home Page is displayed successfully-----------------
+2018-09-20 13:09:39 INFO  Test:345 - #########User is able to create new computer###########
+2018-09-20 13:09:39 INFO  Test:370 - #########User is able to create new computer###########
+2018-09-20 13:09:40 INFO  Test:156 - --------Add new computer clicked successfully-----------------
+2018-09-20 13:09:41 INFO  Test:81 - -----Computer name entered successfully-----
+2018-09-20 13:09:42 INFO  Test:90 - -----Introdced date entered successfully-----
+2018-09-20 13:09:42 INFO  Test:99 - -----Introdced date entered successfully-----
+2018-09-20 13:09:45 INFO  Test:148 - #########Add a new computer page is NOT displayed###########
+2018-09-20 13:09:45 INFO  Test:188 - #########Could not click Create this computer button ###########
+2018-09-20 13:09:45 INFO  Test:345 - #########User is able to create new computer###########
+2018-09-20 13:09:45 INFO  Test:370 - #########User is able to create new computer###########
+2018-09-20 13:09:45 INFO  Test:66 - #########Add a new computer page is NOT displayed###########

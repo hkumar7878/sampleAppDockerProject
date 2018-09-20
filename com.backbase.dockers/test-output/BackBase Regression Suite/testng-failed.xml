@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [BackBase Regression Suite]" parallel="tests">
+  <parameter name="browserType" value="Chrome"/>
+  <listeners>
+    <listener class-name="com.backbase.listeners.CustomListeners"/>
+  </listeners>
+  <test name="Windows+Chrome Test(failed)" parallel="tests">
+    <parameter name="browserType" value="Chrome"/>
+    <classes>
+      <class name="com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases">
+        <methods>
+          <include name="getMethodName"/>
+          <include name="getMethodName"/>
+          <include name="afterEachTest"/>
+          <include name="afterEachTest"/>
+          <include name="TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification"/>
+        </methods>
+      </class> <!-- com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases -->
+    </classes>
+  </test> <!-- Windows+Chrome Test(failed) -->
+  <test name="Windows+firefox Test(failed)" parallel="tests">
+    <parameter name="browserType" value="Firefox"/>
+    <classes>
+      <class name="com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases">
+        <methods>
+          <include name="getMethodName"/>
+          <include name="getMethodName"/>
+          <include name="afterEachTest"/>
+          <include name="afterEachTest"/>
+          <include name="TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification"/>
+        </methods>
+      </class> <!-- com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases -->
+    </classes>
+  </test> <!-- Windows+firefox Test(failed) -->
+</suite> <!-- Failed suite [BackBase Regression Suite] -->
