@@ -75,7 +75,7 @@ public class Page_Home extends BaseSetUp_Dockers{
         try
         {
            
-        	isEventSuccessful=GenericUtilLib.verifyLinkDisplay(lnk_sampleApp, "Play sample application — Computer database");
+        	isEventSuccessful=GenericUtilLib.verifyLinkDisplay(lnk_sampleApp, "Play sample");
             Assert.assertTrue(isEventSuccessful);
             logger.info("--------Home Page is displayed successfully-----------------");
             System.out.println("Home Page is displayed successfully");  
