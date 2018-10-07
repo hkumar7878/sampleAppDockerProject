@@ -1,10 +1,20 @@
-2018-09-20 14:55:32 INFO  Test:91 - Creating a object of Firefox Browser
-2018-09-20 14:55:32 INFO  Test:116 - Creating a object of Chrome Browser
-2018-09-20 14:55:32 INFO  Test:92 - Navigating to http://computer-database.herokuapp.com/computersfor Firefox browser
-2018-09-20 14:55:37 INFO  Test:80 - --------Home Page is displayed successfully-----------------
-2018-09-20 14:55:38 INFO  Test:156 - --------Add new computer clicked successfully-----------------
-2018-09-20 14:55:39 INFO  Test:81 - -----Computer name entered successfully-----
-2018-09-20 14:55:40 INFO  Test:90 - -----Introdced date entered successfully-----
-2018-09-20 14:55:40 INFO  Test:99 - -----Introdced date entered successfully-----
-2018-09-20 14:55:44 INFO  Test:345 - #########User is able to create new computer###########
-2018-09-20 14:55:44 INFO  Test:362 - #########User is correctly unable to create new computer due to missing of new computer name###########
+2018-10-07 06:41:31 INFO  Test:116 - Creating a object of Chrome Browser
+2018-10-07 06:41:31 INFO  Test:91 - Creating a object of Firefox Browser
+2018-10-07 06:41:31 INFO  Test:92 - Navigating to http://computer-database.herokuapp.com/computersfor Firefox browser
+2018-10-07 06:42:03 INFO  Test:80 - --------Home Page is displayed successfully-----------------
+2018-10-07 06:42:03 INFO  Test:156 - --------Add new computer clicked successfully-----------------
+2018-10-07 06:42:05 INFO  Test:81 - -----Computer name entered successfully-----
+2018-10-07 06:42:06 INFO  Test:90 - -----Introdced date entered successfully-----
+2018-10-07 06:42:06 INFO  Test:99 - -----Introdced date entered successfully-----
+2018-10-07 06:42:10 INFO  Test:345 - #########User is able to create new computer###########
+2018-10-07 06:42:10 INFO  Test:362 - #########User is correctly unable to create new computer due to missing of new computer name###########
+2018-10-07 06:42:11 INFO  Test:80 - --------Home Page is displayed successfully-----------------
+2018-10-07 06:42:11 INFO  Test:156 - --------Add new computer clicked successfully-----------------
+2018-10-07 06:42:14 INFO  Test:114 - #########Could not enter new computer name###########
+2018-10-07 06:42:14 INFO  Test:118 - #########Could not enter new computer introduction date###########
+2018-10-07 06:42:14 INFO  Test:122 - #########Could not enter new computer discontinuation date###########
+2018-10-07 06:42:14 INFO  Test:148 - #########Add a new computer page is NOT displayed###########
+2018-10-07 06:42:14 INFO  Test:188 - #########Could not click Create this computer button ###########
+2018-10-07 06:42:14 INFO  Test:345 - #########User is able to create new computer###########
+2018-10-07 06:42:14 INFO  Test:370 - #########User is able to create new computer###########
+2018-10-07 06:42:14 INFO  Test:66 - #########Add a new computer page is NOT displayed###########
