@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [BackBase Regression Suite]" parallel="tests">
+  <parameter name="browserType" value="Chrome"/>
+  <test name="Windows+Chrome Test(failed)" parallel="tests">
+    <parameter name="browserType" value="Chrome"/>
+    <classes>
+      <class name="com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases">
+        <methods>
+          <include name="TC_01_02_03_Verify_New_Computer_Addition_With_Valid_Data"/>
+        </methods>
+      </class> <!-- com.backbase.CreateNewComputerTestCases.Add_New_Computer_Functionality_TestCases -->
+    </classes>
+  </test> <!-- Windows+Chrome Test(failed) -->
+</suite> <!-- Failed suite [BackBase Regression Suite] -->

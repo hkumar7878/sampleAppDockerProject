@@ -1,17 +1,52 @@
 package com.backbase.utilLibrary;
 
 
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
+
 import org.testng.annotations.DataProvider;
+
 import com.backbase.baseSetUp.BaseSetUp_Dockers;
 
 
 public class DataProviderRepository extends BaseSetUp_Dockers{
 	
 
-	static ExcelReader allURIfileName = null;
+	
     static String SheetName = null;
     static String testDataFilePath=System.getProperty("user.dir" + "\\Test Excel Files\\NewComputerTestData.xlsx");
-    ExcelReader excel1=new ExcelReader(testDataFilePath);
+   //public static ExcelReader excel1=new ExcelReader(testDataFilePath);
+    //public static ExcelReader excelReader = null;
+    public static ExcelReader excelReader = null;
+    
+    @DataProvider(name="newComputerData11")
+	public static Object[][] getNewCompData11() {
+    	String path= System.getProperty("user.dir")+"\\Test Excel Files\\" + "NewComputerAddition";
+    	excelReader=new ExcelReader(path);
+		String sheetName="NewComputerTestData.xlsx";
+		int rows = excelReader.getRowCount(sheetName);
+		int cols = excelReader.getColumnCount(sheetName);
+
+		Object[][] data = new Object[rows - 1][1];
+		
+		Hashtable<String,String> table = null;
+
+		for (int rowNum = 2; rowNum <= rows; rowNum++) { // 2
+
+			table = new Hashtable<String,String>();
+			
+			for (int colNum = 0; colNum < cols; colNum++) {
+
+				table.put(excelReader.getCellData(sheetName, colNum, 1), excelReader.getCellData(sheetName, colNum, rowNum));
+				data[rowNum - 2][0] = table;
+			}
+
+		}
+
+		return data;
+
+	}
     
     @DataProvider(name="newComputerData")
     public static Object[][] getNewCompData(){
@@ -20,6 +55,67 @@ public class DataProviderRepository extends BaseSetUp_Dockers{
     	return data;
     }
     
+    
+    
+    
+    @DataProvider(name="newComputerData5")
+	public Object[][] getNewCompData5() {
+    	ExcelReader excel1=new ExcelReader(testDataFilePath);
+		String sheetName="NewComputerTestData.xlsx";
+		int rows = excel1.getRowCount(sheetName);
+		int cols = excel1.getColumnCount(sheetName);
+
+		Object[][] data = new Object[rows - 1][1];
+		
+		Hashtable<String,String> table = null;
+
+		for (int rowNum = 2; rowNum <= rows; rowNum++) { // 2
+
+			table = new Hashtable<String,String>();
+			
+			for (int colNum = 0; colNum < cols; colNum++) {
+
+				table.put(excel1.getCellData(sheetName, colNum, 1), excel1.getCellData(sheetName, colNum, rowNum));
+				data[rowNum - 2][0] = table;
+			}
+
+		}
+
+		return data;
+
+	}
+    
+ 
+    
+   /* @DataProvider(name="newComputerData2")
+	public Object[][] getNewCompData1() {
+
+		String sheetName="NewComputerTestData.xlsx";
+		int rows = excel1.getRowCount(sheetName);
+		int cols = excel1.getColumnCount(sheetName);
+
+		Object[][] data = new Object[rows - 1][1];
+		
+		//Hashtable<String,String> table = null;
+
+		for (int i = 0; i <= rows; i++) 
+		{ 
+			Map<Object, Object> datamap=new HashMap<Object,Object>();
+			
+			for (int j= 0; j < cols; j++) 
+			{
+
+				datamap.put(excel1.getCellData(sheetName, j, 1), excel1.getCellData(sheetName, j, i));
+			
+			}
+			
+			data[i][0]=datamap;
+
+		}
+
+		return data;
+
+	}*/
     @DataProvider(name="existingCompData")
     public static Object[][] getExistingComputerData(){
         System.out.println("Inside data provider for exiting computer dataprovider");
@@ -43,7 +139,7 @@ public class DataProviderRepository extends BaseSetUp_Dockers{
     }
  
     
-    public Object [][] getExcelData(String fileName, String sheetName) {
+    /*public Object [][] getExcelData(String fileName, String sheetName) {
         int rows=excel1.getRowCount(sheetName);
         int cols=excel1.getColumnCount(sheetName);
         Object data [][]=new Object[rows-1][cols];
@@ -56,7 +152,7 @@ public class DataProviderRepository extends BaseSetUp_Dockers{
             }
         }
         return data;
-    }
+    }*/
 
     
 

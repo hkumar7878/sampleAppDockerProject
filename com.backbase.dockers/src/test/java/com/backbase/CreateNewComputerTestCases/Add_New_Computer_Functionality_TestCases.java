@@ -4,12 +4,16 @@ package com.backbase.CreateNewComputerTestCases;
 import java.lang.reflect.Method;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.Map;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 import com.backbase.appPages.Page_Home;
 import com.backbase.appPages.Page_NewComputerAddition;
 import com.backbase.baseSetUp.BaseSetUp_Dockers;
@@ -83,11 +87,13 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 	 * #########################################################################################################
 	 */
 	
-	
+/*	
 	
 	@Test(dataProviderClass=DataProviderRepository.class,dataProvider="newComputerData",priority=1)
 	public void TC_01_02_03_Verify_New_Computer_Addition_With_Valid_Data(String newcompName,String introDate,String dcDate,String companyName) throws ParseException
+	//public void TC_01_02_03_Verify_New_Computer_Addition_With_Valid_Data(Map <String,String> data) throws ParseException
 	{
+		try{
 		homePgObj= new Page_Home(driver);
 				
 		newCompAddObj= new Page_NewComputerAddition(driver);
@@ -117,18 +123,19 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 		// Step 4: Enter New Computer name in Computer Name field
 		
 		newCompAddObj.enterNewCompData("Firefox", "CompName", newcompName, testCaseName);
+		//newCompAddObj.enterNewCompData("Firefox", "CompName", data.get("Computer Name"), testCaseName);
 		
 		// Step 5: Enter New Computer Introduction date
 		
-		newCompAddObj.enterNewCompData("Firefox", "introDate", introDate, testCaseName);
+		//newCompAddObj.enterNewCompData("Firefox", "introDate", data.get("Introducation Date"), testCaseName);
 		
 		// Step 6: Enter New Computer Discontinue date
 		
-		newCompAddObj.enterNewCompData("Firefox", "disContDate", dcDate, testCaseName);
+		//newCompAddObj.enterNewCompData("Firefox", "disContDate", data.get("Discontinued Date"), testCaseName);
 		
 		// Step 7: Select company 'Apple Inc.' from company drop down
 		
-		newCompAddObj.selectCompanyName("Firefox", companyName, testCaseName);
+		//newCompAddObj.selectCompanyName("Firefox", data.get("Company Name"), testCaseName);
 		
 		// Step 8: Click on 'Create this computer' button
 		
@@ -157,7 +164,7 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 		// Step 10: To Verify success message consisting of new computer name on home page
 		
 		successMsg=homePgObj.getSuccessMgs();
-		if(successMsg.contains("Done") || successMsg.contains(newcompName))
+		//if(successMsg.contains("Done") || successMsg.contains(data.get("Computer Name")))
 		{
 			
 			ExtentTestManager.getTest().log(LogStatus.PASS, "Success message contains new computer name hence new computer added successfully");
@@ -172,7 +179,7 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 		
 		// Step 11: Enter new computer name in search field
 		
-		homePgObj.enterCompName_InSrchField(newcompName,"Addition");
+		homePgObj.enterCompName_InSrchField(data.get("Computer Name"),"Addition");
 		
 		
 		// Step 12: Click on 'Filter by name' button
@@ -184,7 +191,7 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 		
 		// 13.1 First fetch the searched new computer details
 		
-		searchedData= homePgObj.fetchTableData(newcompName);
+		searchedData= homePgObj.fetchTableData(data.get("Computer Name"));
 		
 		// 13.2 - Format the Introduce date of filtered record in accordance and comparable with input data
 		
@@ -201,11 +208,11 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 		// 13.4 Verify the correctness of new computer name in filtered record on home page
 		
 		// Assert.assertEquals(introDate, introFormattedDate);
-		if(newcompName.equals(searchedData.get(0)))
+		if(data.get("Computer Name").equals(searchedData.get(0)))
 		{
 			
 				
-				ExtentTestManager.getTest().log(LogStatus.PASS, "Correct computer name i.e-->" + newcompName + " is displayed in filtered record on home page");
+				ExtentTestManager.getTest().log(LogStatus.PASS, "Correct computer name i.e-->" + data.get("Computer Name") + " is displayed in filtered record on home page");
 				logger.info("#########Correct new computer name is displayed in filtered record###########");
 		}
 		else
@@ -217,11 +224,11 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 		
 		// 13.5 Verify the correctness of Introduced date in filtered record on home page
 		
-		if(introDate.equals(introFormattedDate))
+		if(data.get("Introducation Date").equals(introFormattedDate))
 		{
 			
 				
-				ExtentTestManager.getTest().log(LogStatus.PASS, "Correct-->" + introDate + " is displayed in filtered record on home page");
+				ExtentTestManager.getTest().log(LogStatus.PASS, "Correct-->" + data.get("Introducation Date") + " is displayed in filtered record on home page");
 				logger.info("#########Correct Introduced date is displayed in filtered record###########");
 		}
 		else
@@ -233,11 +240,11 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 		
 		// 13.6 Verify the correctness of Discontinued date in filtered record on home page
 		
-		if(dcDate.equals(dCFormatteddate))
+		if(data.get("Discontinued Date").equals(dCFormatteddate))
 		{
 			
 				
-				ExtentTestManager.getTest().log(LogStatus.PASS, "Correct Discontinued date i.e.-->" + dcDate + " is displayed in filtered record on home page");
+				ExtentTestManager.getTest().log(LogStatus.PASS, "Correct Discontinued date i.e.-->" + data.get("Discontinued Date") + " is displayed in filtered record on home page");
 				logger.info("#########Correct Introduced date is displayed in filtered record###########");
 		}
 		else
@@ -249,11 +256,11 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 		
 		// 13.7 Verify the correctness of Company name in filtered record on home page
 		
-		if(companyName.equals(searchedData.get(3)))
+		if(data.get("Company Name").equals(searchedData.get(3)))
 		{
 			
 				
-				ExtentTestManager.getTest().log(LogStatus.PASS, "Correct company name i.e -->" + companyName + " is displayed in filtered record on home page");
+				ExtentTestManager.getTest().log(LogStatus.PASS, "Correct company name i.e -->" + data.get("Company Name") + " is displayed in filtered record on home page");
 				logger.info("#########Correct new computer name is displayed in filtered record###########");
 		}
 		else
@@ -262,11 +269,55 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 			ExtentTestManager.getTest().log(LogStatus.FAIL, "Incorrect company name i.e -->" + searchedData.get(3) + "is displayed in filtered record on home page");
 			logger.info("#########Incorrect company name is displayed in filtered record###########");
 		}
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
 		
+		
+		
+	}*/
+	
+	
+	@Test(dataProviderClass=DataProviderRepository.class,dataProvider="newComputerData10",priority=1)
+	//public void TC_01_02_03_Verify_New_Computer_Addition_With_Valid_Data(String newcompName,String introDate,String dcDate,String companyName) throws ParseException
+	public void TC_01_02_03_Verify_New_Computer_Addition_With_Valid_Data(Map <String,String> data) throws ParseException
+	{
+		
+		homePgObj= new Page_Home(driver);
+				
+		newCompAddObj= new Page_NewComputerAddition(driver);
+			
+		// Step 1: Verify home page is displayed
+		
+		homePgObj.verifyHomePage("Addition");
+		
+		newCompAddObj= new Page_NewComputerAddition(driver);
+		
+		// Step 2: Get the total computer count found header text from the home page
+		
+		compFoundBeforeAddition=homePgObj.getComputerFoundData();
+		
+		// To get number of computers from header text
+		
+		int computerFoundBeforeAddition=ApplicationUtilityLib.getTotalComputerValue(compFoundBeforeAddition);
+				
+		// Step 2: Click on 'Add a new computer' button 
+		
+		newCompAddObj=homePgObj.clickAddNewCompBtn("Firefox", testCaseName);		
+		
+		// Step 3: Verify Add New Computer page is displayed
+		
+		newCompAddObj.verify_Header_Display("Firefox", testCaseName);
+		
+		// Step 4: Enter New Computer name in Computer Name field
+		
+		//newCompAddObj.enterNewCompData("Firefox", "CompName", newcompName, testCaseName);
+		newCompAddObj.enterNewCompData("Firefox", "CompName", data.get("Computer Name"), testCaseName);
 		
 		
 	}
-	
 
 	/** #########################################################################################################
 	 * TC_004_New_Computer_Addition_New 'Computer Name' Mandatory Field Verification	
@@ -279,7 +330,8 @@ public class Add_New_Computer_Functionality_TestCases extends BaseSetUp_Dockers{
 	 * #########################################################################################################
 	 */
 	
-	@Test(priority=2)
+	
+	
 	public void TC_004_New_Computer_Addition_New_Computer_Name_Mandatory_Field_Verification(){
 		
 		homePgObj= new Page_Home(driver);

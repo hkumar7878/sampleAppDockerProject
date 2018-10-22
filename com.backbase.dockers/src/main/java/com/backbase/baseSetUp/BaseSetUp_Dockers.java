@@ -61,6 +61,22 @@ public class BaseSetUp_Dockers {
 		}
 	}
 
+	
+	public static String [][] getExcelData1(String ExcelName,String SheetName)
+	 {
+	    	String path= System.getProperty("user.dir")+"\\Test Excel Files\\" + ExcelName;
+	    	excelReader=new ExcelReader(path);
+	    	String[][] excelData = excelReader.getDatafromExcel(SheetName, ExcelName);
+	    	return excelData;
+	 }	  
+	
+	public static String [][] getExcelHashData(String ExcelName,String SheetName)
+	 {
+	    	String path= System.getProperty("user.dir")+"\\Test Excel Files\\" + ExcelName;
+	    	excelReader=new ExcelReader(path);
+	    	String[][] excelData = excelReader.getDatafromExcel(SheetName, ExcelName);
+	    	return excelData;
+	 }
 
 	//public void initializeTestBaseSetup(String browserType) {
 	public void initializeTestBaseSetup(String browserType) {
@@ -86,24 +102,44 @@ public class BaseSetUp_Dockers {
 			
 			if (browserType.contains("Firefox")) {
 
-				//System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + "\\" + "Browser Exes/geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + "\\" + "Browser Exes/geckodriver.exe");
 				System.out.println("Launching firefox browser");
 				logger.info("Creating a object of Firefox Browser");
 				logger.info("Navigating to " + app_Url + "for Firefox browser");
-				FirefoxOptions ffoptions= new FirefoxOptions();
-				ffoptions.addArguments("disable-gpu");
-				cap = DesiredCapabilities.firefox();
-		        cap.setCapability(FirefoxOptions.FIREFOX_OPTIONS, ffoptions);	
-				//driver = new FirefoxDriver();
+				//FirefoxOptions ffoptions= new FirefoxOptions();
+				//ffoptions.addArguments("disable-gpu");
+				//cap = DesiredCapabilities.firefox();
+		        //cap.setCapability(FirefoxOptions.FIREFOX_OPTIONS, ffoptions);	
+				driver = new FirefoxDriver();
 				//driver=new RemoteWebDriver(new URL ("http://172.17.0.2:4444/wd/hub"), cap);
-				driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
+				//driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
 		        //driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
 				//driver=new RemoteWebDriver(new URL("http://172.17.0.3:5555/wd/hub"),cap);
 				driver.get(app_Url);
 				
 				driver.manage().window().maximize();
 			}
+			
 			else if (browserType.contains("Chrome")) {
+
+				System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "\\" + "Browser Exes/chromedriver.exe");
+				System.out.println("Launching chrome browser");
+				logger.info("Creating a object of chrome Browser");
+				logger.info("Navigating to " + app_Url + "for chrome browser");
+				//FirefoxOptions ffoptions= new FirefoxOptions();
+				//ffoptions.addArguments("disable-gpu");
+				//cap = DesiredCapabilities.firefox();
+		        //cap.setCapability(FirefoxOptions.FIREFOX_OPTIONS, ffoptions);	
+				driver = new ChromeDriver();
+				//driver=new RemoteWebDriver(new URL ("http://172.17.0.2:4444/wd/hub"), cap);
+				//driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
+		        //driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
+				//driver=new RemoteWebDriver(new URL("http://172.17.0.3:5555/wd/hub"),cap);
+				driver.get(app_Url);
+				
+				driver.manage().window().maximize();
+			}
+			/*else if (browserType.contains("Chrome")) {
 				String currentDir = System.getProperty("user.dir");
 				String chromeDriverLocation = currentDir + "/Browser Exes/chromedriver.exe";
 				
@@ -124,7 +160,7 @@ public class BaseSetUp_Dockers {
 				driver.get(app_Url);
 				driver.manage().window().maximize();
 
-			}
+			}*/
 
 		} catch (Exception e) {
 			System.out.println("Error....." + e.getMessage());
@@ -152,11 +188,5 @@ public class BaseSetUp_Dockers {
 	            System.out.println(e.getMessage());
 	        }
 	    }
-	public static String [][] getExcelData1(String ExcelName,String SheetName)
-	 {
-	    	String path= System.getProperty("user.dir")+"\\Test Excel Files\\" + ExcelName;
-	    	excelReader=new ExcelReader(path);
-	    	String[][] excelData = excelReader.getDatafromExcel(SheetName, ExcelName);
-	    	return excelData;
-	 }	  
+	
 }
