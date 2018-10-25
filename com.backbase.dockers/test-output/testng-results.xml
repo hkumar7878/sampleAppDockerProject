@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="BackBase Regression Suite" duration-ms="15020" started-at="2018-10-22T16:34:27Z" finished-at="2018-10-22T16:34:42Z">
+  <suite name="BackBase Regression Suite" duration-ms="16013" started-at="2018-10-25T16:49:50Z" finished-at="2018-10-25T16:50:06Z">
     <groups>
     </groups>
-    <test name="Windows+Chrome Test" duration-ms="15020" started-at="2018-10-22T16:34:27Z" finished-at="2018-10-22T16:34:42Z">
+    <test name="Windows+Chrome Test" duration-ms="16013" started-at="2018-10-25T16:49:50Z" finished-at="2018-10-25T16:50:06Z">
       <class name="com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com">
-        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method, java.lang.String)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@a67c67e]" name="getMethodName" is-config="true" duration-ms="6742" started-at="2018-10-22T09:34:27Z" finished-at="2018-10-22T09:34:34Z">
+        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method, java.lang.String)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@79e2c065]" name="getMethodName" is-config="true" duration-ms="7746" started-at="2018-10-25T22:19:50Z" finished-at="2018-10-25T22:19:58Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getMethodName -->
-        <test-method status="PASS" signature="TC_01_Verify_New_Computer_Addition_With_Valid_Data(java.util.Map)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@a67c67e]" name="TC_01_Verify_New_Computer_Addition_With_Valid_Data" duration-ms="6117" started-at="2018-10-22T09:34:34Z" data-provider="newComputerData10" finished-at="2018-10-22T09:34:40Z">
+        <test-method status="PASS" signature="TC_01_Verify_New_Computer_Addition_With_Valid_Data(java.util.Map)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@79e2c065]" name="TC_01_Verify_New_Computer_Addition_With_Valid_Data" duration-ms="5893" started-at="2018-10-25T22:19:58Z" data-provider="newComputerData10" finished-at="2018-10-25T22:20:04Z">
           <params>
             <param index="0">
               <value>
@@ -34,11 +34,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01_Verify_New_Computer_Addition_With_Valid_Data -->
-        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@a67c67e]" name="afterEachTest" is-config="true" duration-ms="1608" started-at="2018-10-22T09:34:40Z" finished-at="2018-10-22T09:34:42Z">
+        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@79e2c065]" name="afterEachTest" is-config="true" duration-ms="1673" started-at="2018-10-25T22:20:04Z" finished-at="2018-10-25T22:20:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_01_Verify_New_Computer_Addition_With_Valid_Data status=SUCCESS method=TC_01_Add_New_Com.TC_01_Verify_New_Computer_Addition_With_Valid_Data(java.util.Map)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@a67c67e] output={null}]]]>
+                <![CDATA[[TestResult name=TC_01_Verify_New_Computer_Addition_With_Valid_Data status=SUCCESS method=TC_01_Add_New_Com.TC_01_Verify_New_Computer_Addition_With_Valid_Data(java.util.Map)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@79e2c065] output={null}]]]>
               </value>
             </param>
           </params>

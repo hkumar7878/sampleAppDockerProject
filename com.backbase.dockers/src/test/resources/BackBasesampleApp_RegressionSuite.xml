@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="BackBase Regression Suite" parallel="tests" thread-count="3">
-
+<listeners>
+      
+       <listener class-name="com.backbase.listeners.CustomListeners"/>
+  </listeners>
    <test name="Windows+Chrome Test">
   <parameter name="browserType" value="Chrome"></parameter>
     <classes>

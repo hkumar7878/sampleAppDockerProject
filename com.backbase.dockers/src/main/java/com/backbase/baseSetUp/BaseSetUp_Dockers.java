@@ -35,6 +35,7 @@ public class BaseSetUp_Dockers {
 	public static ExtentTest ext_logger;
 	public String app_Url;
 	public String browserType;
+	public String browserName;
 	DesiredCapabilities cap=null;
 	
 	public static ExtentTest Extnt_loggerAllCities;
@@ -44,6 +45,7 @@ public class BaseSetUp_Dockers {
 	public static int suiteRow_AllURIs = 0;
 	public String XMLtestCaseName = null;
 	public String XMLtestCaseID = null;
+	String browser=null;
 
 	public BaseSetUp_Dockers() {
 		try {
@@ -78,7 +80,7 @@ public class BaseSetUp_Dockers {
 	    	return excelData;
 	 }
 
-	//public void initializeTestBaseSetup(String browserType) {
+	
 	public void initializeTestBaseSetup(String browserType) {
 		app_Url = prop.getProperty("App_URL");
 		//browserType = prop.getProperty("Browser_Type");
@@ -162,6 +164,46 @@ public class BaseSetUp_Dockers {
 
 			}*/
 
+		} catch (Exception e) {
+			System.out.println("Error....." + e.getMessage());
+		}
+
+	}
+	
+	public void initializeTestBaseSetup1(String browserType) {
+		if(System.getenv("Browser")!=null && !System.getenv("browser").isEmpty())
+			browser = System.getenv("browser");
+		else
+			browser = prop.getProperty("browser");
+		
+		prop.setProperty("Browser_Type", browser);
+		app_Url = prop.getProperty("App_URL");
+		browserName=prop.getProperty("Browser_Type");
+		
+		
+		try {		
+			//if (browserName.contains("Firefox")) {
+			if (prop.getProperty("Browser_Type").equals("Firefox")) {
+				System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + "\\" + "Browser Exes/geckodriver.exe");
+				System.out.println("Launching firefox browser");
+				logger.info("Creating a object of Firefox Browser");
+				logger.info("Navigating to " + app_Url + "for Firefox browser");	
+				driver = new FirefoxDriver();		
+				driver.get(app_Url);			
+				driver.manage().window().maximize();
+			}
+			
+			//else if (browserName.contains("Chrome")) {
+			else if (prop.getProperty("Browser_Type").equals("Chrome")) {
+				System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "\\" + "Browser Exes/chromedriver.exe");
+				System.out.println("Launching chrome browser");
+				logger.info("Creating a object of chrome Browser");
+				logger.info("Navigating to " + app_Url + "for chrome browser");		
+				driver = new ChromeDriver();			
+				driver.get(app_Url);			
+				driver.manage().window().maximize();
+			}
+			
 		} catch (Exception e) {
 			System.out.println("Error....." + e.getMessage());
 		}
