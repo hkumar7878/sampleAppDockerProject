@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Failed suite [BackBase Regression Suite]" parallel="tests">
+<suite thread-count="2" name="Failed suite [BackBase Regression Suite]" parallel="tests">
   <parameter name="browserType" value="Chrome"/>
+  <listeners>
+    <listener class-name="com.backbase.listeners.CustomListeners"/>
+  </listeners>
   <test name="Windows+Chrome Test(failed)" parallel="tests">
     <parameter name="browserType" value="Chrome"/>
     <classes>

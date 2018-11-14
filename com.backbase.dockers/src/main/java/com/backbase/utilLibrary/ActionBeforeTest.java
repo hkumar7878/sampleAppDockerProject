@@ -45,8 +45,10 @@ public class ActionBeforeTest extends BaseSetUp_Dockers {
 
 		try {			
 				//ext_logger = report1.startTest(testCaseName, testCaseName);
-				//initializeTestBaseSetup(browserType);
-				initializeTestBaseSetup1(browserName);			
+				initializeTestBaseSetup(browserName);
+				//initializeTestBaseSetup2(browserName);	
+				// Below method is used for thread local
+				//initializeTestBaseSetup3(browserName);
 		}
 		catch (Exception e) {
 			System.out.println(e.getMessage());

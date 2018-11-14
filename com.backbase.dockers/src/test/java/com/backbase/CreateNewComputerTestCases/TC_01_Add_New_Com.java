@@ -47,6 +47,7 @@ public class TC_01_Add_New_Com extends BaseSetUp_Dockers {
 		 String mthdName=method.getName();
 		 System.out.println("Starting " + mthdName + "test case" );
 		 ExtentTestManager.startTest(mthdName);
+		 //actionBeforeTest.beforeTestAction3(mthdName,mthdName,browserType);
 		 actionBeforeTest.beforeTestAction3(mthdName,mthdName,browserType);
 	}
 	

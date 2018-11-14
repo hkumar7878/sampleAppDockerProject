@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="BackBase Regression Suite" duration-ms="16013" started-at="2018-10-25T16:49:50Z" finished-at="2018-10-25T16:50:06Z">
+  <suite name="BackBase Regression Suite" duration-ms="5194" started-at="2018-11-14T15:01:56Z" finished-at="2018-11-14T15:02:01Z">
     <groups>
     </groups>
-    <test name="Windows+Chrome Test" duration-ms="16013" started-at="2018-10-25T16:49:50Z" finished-at="2018-10-25T16:50:06Z">
+    <test name="Windows+Chrome Test" duration-ms="5194" started-at="2018-11-14T15:01:56Z" finished-at="2018-11-14T15:02:01Z">
       <class name="com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com">
-        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method, java.lang.String)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@79e2c065]" name="getMethodName" is-config="true" duration-ms="7746" started-at="2018-10-25T22:19:50Z" finished-at="2018-10-25T22:19:58Z">
+        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method, java.lang.String)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@20398b7c]" name="getMethodName" is-config="true" duration-ms="476" started-at="2018-11-14T20:31:58Z" finished-at="2018-11-14T20:31:58Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getMethodName -->
-        <test-method status="PASS" signature="TC_01_Verify_New_Computer_Addition_With_Valid_Data(java.util.Map)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@79e2c065]" name="TC_01_Verify_New_Computer_Addition_With_Valid_Data" duration-ms="5893" started-at="2018-10-25T22:19:58Z" data-provider="newComputerData10" finished-at="2018-10-25T22:20:04Z">
+        <test-method status="FAIL" signature="TC_01_Verify_New_Computer_Addition_With_Valid_Data(java.util.Map)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@20398b7c]" name="TC_01_Verify_New_Computer_Addition_With_Valid_Data" duration-ms="333" started-at="2018-11-14T20:31:58Z" data-provider="newComputerData10" finished-at="2018-11-14T20:31:59Z">
           <params>
             <param index="0">
               <value>
@@ -31,14 +31,45 @@
               </value>
             </param>
           </params>
+          <exception class="junit.framework.AssertionFailedError">
+            <full-stacktrace>
+              <![CDATA[junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:48)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.backbase.appPages.Page_Home.verifyHomePage(Page_Home.java:79)
+	at com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com.TC_01_Verify_New_Computer_Addition_With_Valid_Data(TC_01_Add_New_Com.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.AssertionFailedError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01_Verify_New_Computer_Addition_With_Valid_Data -->
-        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@79e2c065]" name="afterEachTest" is-config="true" duration-ms="1673" started-at="2018-10-25T22:20:04Z" finished-at="2018-10-25T22:20:06Z">
+        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@20398b7c]" name="afterEachTest" is-config="true" duration-ms="2013" started-at="2018-11-14T20:31:59Z" finished-at="2018-11-14T20:32:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_01_Verify_New_Computer_Addition_With_Valid_Data status=SUCCESS method=TC_01_Add_New_Com.TC_01_Verify_New_Computer_Addition_With_Valid_Data(java.util.Map)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@79e2c065] output={null}]]]>
+                <![CDATA[[TestResult name=TC_01_Verify_New_Computer_Addition_With_Valid_Data status=FAILURE method=TC_01_Add_New_Com.TC_01_Verify_New_Computer_Addition_With_Valid_Data(java.util.Map)[pri:0, instance:com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com@20398b7c] output={null}]]]>
               </value>
             </param>
           </params>
