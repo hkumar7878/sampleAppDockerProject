@@ -52,7 +52,7 @@
 				<version>2.19.1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/BackBasesampleApp_RegressionSuite.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/BackBasesampleApp_RegressionSuite_No_ThreadLocal.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
