@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BackBase Regression Suite" parallel="tests" thread-count="2">
+<listeners>
+      
+       <listener class-name="com.backbase.listeners.CustomListeners"/>
+  	  </listeners>
+  <!--  <test name="Windows+Firefox Test">
+  <parameter name="browserType" value="Firefox"></parameter>
+    <classes>
+       <class name="com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com_Thread_Local">
+        <methods>
+        	<include name="TC_01_Verify_New_Computer_Addition_With_Valid_Data_Thread_Local"/>
+      </methods>
+       </class>
+    </classes>
+     </test> -->
+    
+     <test name="Windows+Chrome Test">
+    <parameter name="browserType" value="Chrome"></parameter>
+    <classes>
+       <class name="com.backbase.CreateNewComputerTestCases.TC_01_Add_New_Com">
+        <methods>
+        	<include name="TC_01_Verify_New_Computer_Addition_With_Valid_Data"/>
+      </methods>
+       </class>
+    </classes>
+  </test>
+</suite>
